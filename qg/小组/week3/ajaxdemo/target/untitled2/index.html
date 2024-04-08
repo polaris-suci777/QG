@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX Demo</title>
+    <script src=jquery-3.7.1.min.js></script> <!-- 引入jQuery -->
+</head>
+<body>
+
+<button id="ajaxBtn">发送AJAX请求</button>
+<div id="result"></div> <!-- 用于展示数据 -->
+<script>
+    $(document).ready(function() {
+        $('#ajaxBtn').click(function() { // 按钮点击事件
+            $.ajax({ // 发起AJAX请求
+                url: '/ajax', // 请求URL，与Servlet的URL映射对应
+                type: 'GET', // 请求类型，与Servlet的doGet方法对应
+                dataType: 'json', // 响应数据类型为JSON
+                success: function(data) { // 请求成功回调函数，data为响应数据（JSON对象）
+                    $('#result').text(data.message); // 将响应数据显示在页面上
+                },
+                error: function(jqXHR, textStatus, errorThrown) { // 请求失败回调函数
+                    $('#result').text('请求失败：' + textStatus); // 显示错误信息
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

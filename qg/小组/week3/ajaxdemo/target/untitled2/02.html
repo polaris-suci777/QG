@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom 对象</title>
+</head>
+<body>
+<div id="mydiv">文本</div>
+
+</body>
+<SCRIPT SRC="jquery-3.7.1.min.js" TYPE="text/javascript" charset="utf-8"></SCRIPT>
+<script type="text/javascript">
+//引入jquery核心文件
+
+    var divdom=document.getElementById("mydiv");
+    console.log(divdom);
+    var divsdom=document.getElementsByTagName("div");
+    console.log(divsdom);
+
+    // jquery 对象
+    var divjquery =$("#mydiv");
+    console.log(divjquery);
+</script>
+</html>
