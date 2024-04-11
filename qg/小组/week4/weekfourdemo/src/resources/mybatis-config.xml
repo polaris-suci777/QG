@@ -5,7 +5,7 @@
 <configuration>
     <!--起别名-->
     <typeAliases>
-        <package name="com.itheima.pojo"/>
+        <package name="weekfourdemo.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -21,6 +21,6 @@
     </environments>
     <mappers>
         <!--扫描mapper-->
-        <package name="com.itheima.mapper"/>
+        <package name="com.weekfourdemo.mapper"/>
     </mappers>
 </configuration>

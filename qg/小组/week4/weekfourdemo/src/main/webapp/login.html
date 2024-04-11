@@ -23,5 +23,32 @@
     </form>
 </div>
 
+
+<script>
+    $('#loginBtn').click(function() {
+        var username = $('#username').val();
+        var password = $('#password').val();
+        $.ajax({
+            url: 'loginServlet', // Servlet的映射路径
+            type: 'POST',
+            data: {
+                username: username,
+                password: password
+            },
+            success: function(response) {
+                // 处理成功响应
+                if (response.success) {
+                    alert("登录成功");
+                    // 这里可以添加其他逻辑，比如跳转到另一个页面
+                } else {
+                    alert("登录失败");
+                    // 处理后端返回的具体错误信息
+                }
+            },
+
+        });
+    });
+</script>
+
 </body>
 </html>

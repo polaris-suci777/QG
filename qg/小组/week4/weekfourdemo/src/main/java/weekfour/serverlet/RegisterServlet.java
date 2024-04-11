@@ -1,6 +1,6 @@
 package weekfour.serverlet;
 
-import weekfour.mapper.UserMapper;
+import weekfour.dao.lmpl.UserMapper;
 import weekfour.pojo.User;
 import weekfour.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
@@ -53,7 +53,7 @@ public class RegisterServlet extends HttpServlet {
             response.setContentType("text/html;charset=utf-8");
             response.getWriter().write("用户名已存在");
         }
-
+        response.sendRedirect("login.html");
     }
 
     @Override

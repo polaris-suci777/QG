@@ -1,6 +1,6 @@
 package weekfour.serverlet;
 
-import weekfour.mapper.UserMapper;
+import weekfour.dao.lmpl.UserMapper;
 import weekfour.pojo.User;
 import weekfour.util.SqlSessionFactoryUtils;
 import org.apache.ibatis.session.SqlSession;
